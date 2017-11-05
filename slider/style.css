@@ -1,0 +1,63 @@
+.slider{
+  width: 600px;
+  /* solo muestra el elemento que ocupe el ancho de slider. Permitir mostrar una sola imagen*/
+  overflow: hidden;
+  /* end comment*/
+  position: relative;
+}
+
+.slider .controls ul{
+  padding: 0px;
+  text-align: center;
+  position: absolute;
+  bottom: 1em;
+  margin: 0px;
+  width: 100%;
+  z-index: 5;
+}
+
+.slider .controls li{
+  list-style-type: none;
+  background-color: #444;
+  width: 20px;
+  height: 20px;
+  border-radius: 50%;
+  box-shadow: 0px 0px 5px rgba(0,0,0,0.4);
+  margin-right: 5px;
+  display: inline-block;
+  cursor: pointer;
+}
+
+.slider .controls li.active{
+  background-color: rgb(50,50,150);
+}
+
+.slider .container{
+  /* pone los elementos en la misma linea sin importar el ancho de la pantalla*/
+  white-space: nowrap;
+  /* end comment*/
+  /* para poder mover los slider por medio de la propiedad left */
+  position: relative;
+  /* end comment */
+  /* para la transision entre slider*/
+  transition: all 0.3s;
+  /* end comment */
+  /* para que el primer slider tenga animacion se debe poner un valor a la propiedad left de css*/
+  left: 0px;
+  /* end comment */
+
+}
+.slider .container *{
+  /* los elementos dentro del container no se ven afectados por poner elementos en una sola linea*/
+  white-space: normal;
+  /* end comment*/
+}
+
+.slider img{
+  width: 100%;
+  height: 50vh;
+  display: inline-block;
+  /* al colocar elementos una al costado del otra (inline-block), se coloca x defecto un margin por eso se pone margin-right -4px*/
+  margin-right: -4px;
+  /* end comment*/
+}

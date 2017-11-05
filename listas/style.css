@@ -1,0 +1,34 @@
+.custom-list li{
+  /* es un estilo de lista */
+  /*list-style-type: lower-latin;*/
+  list-style-type: none;
+  position: relative;
+  margin-top: 1em;
+}
+.custom-list li::before{
+  content: "";
+  position: absolute;
+  width: 0.5em;
+  height: 0.5em;
+  border-radius: 50%;
+  background-color: red;
+  left: -1.3em;
+  top: 0.25em;
+}
+
+.icons-list li{
+  list-style-type: none;
+  position: relative;
+  margin-top: 1em;
+}
+.icons-list li::before{
+  content: "\f00c";
+  position: absolute;
+  width: 0.5em;
+  height: 0.5em;
+  font-family: FontAwesome;
+  font-size: 0.8em;
+  color: green;
+  left: -1.3em;
+  top: 0.25em;
+}
